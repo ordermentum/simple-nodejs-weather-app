@@ -1,0 +1,23 @@
+{
+    "kind":"Service",
+    "apiVersion":"v1",
+    "metadata":{
+       "name":"om-weather-app",
+       "labels":{
+          "app":"om-weather-app"
+       }
+    },
+    "spec":{
+       "ports": [
+          {
+            "port":3000,
+            "targetPort":"http-server"
+          }
+       ],
+       "selector":{
+          "app":"om-weather-app"
+       },
+       "type": "LoadBalancer"
+    }
+ }
+ 
